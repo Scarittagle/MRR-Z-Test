@@ -1,7 +1,7 @@
 #pragma once
 //C++ implemented function for MRR-Z Test
 //Header File
-//Copyright Weiwei Su @ 2020
+//Copyright Weiwei Su - Scarittagle @ 2020
 
 double rm_square(double R1a2a, double R1a2b);
 
