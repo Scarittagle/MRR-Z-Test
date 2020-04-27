@@ -7,8 +7,8 @@
 
 //Driver
 double MRRZTest(double R1a2a, double R1a2b, double R2a2b, int N){
-	double Z1a2b = Z1a2b(R1a2b);
-	double Z1a2a = Z1a2a(R1a2a);
+	double Z1a2b_Value = Z1a2b(R1a2b);
+	double Z1a2a_Value = Z1a2a(R1a2a);
 	double rm2 = rm_square(R1a2a, R1a2b);
 	double f = F_value(R2a2b, rm2);
 	double h = H_value(f, rm2);
@@ -32,14 +32,14 @@ double H_value(double fvalue, double rmSquare) {
 	return (1 - (fvalue * rmSquare)) / (1 - rmSquare);
 }
 
-double Z1a2b(double R1a2b) {
+double Z1a2b_Value(double R1a2b) {
 	double numerator = 1 + R1a2b; // I do this to keep on track, better readability
 	double denominator = 1 - R1a2b;
 
 	return (1 / 2)*log(numerator / denominator);
 }
 
-double Z1a2a(double R1a2a) {
+double Z1a2a_Value(double R1a2a) {
 	double numerator = 1 + R1a2a; // I do this to keep on track, better readability
 	double denominator = 1 - R1a2a;
 
