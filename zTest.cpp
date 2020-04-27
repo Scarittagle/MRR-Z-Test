@@ -1,6 +1,6 @@
 //C++ implemented function for MRR-Z Test
 //
-////Copyright Weiwei Su @ 2020
+////Copyright Weiwei Su - Scarittagle @ 2020
 
 #include <math.h>
 
