@@ -1,9 +1,19 @@
 //C++ implemented function for MRR-Z Test
 //
-////Copyright Weiwei Su - Scarittagle @ 2020
+////Copyright Weiwei Su @ 2020
 
 #include <math.h>
 
+//Driver
+double MRRZTest(double R1a2a, double R1a2b, double R2a2b, int N){
+	double Z1a2b = Z1a2b(R1a2b);
+	double Z1a2a = Z1a2a(R1a2a);
+	double rm2 = rm_square(R1a2a, R1a2b);
+	double f = F_value(R2a2b, rm2);
+	double h = H_value(f, rm2);
+
+	return Z_Value(Z1a2a, Z1a2b, R2a2b, h, N);
+}
 
 double Z_Value(double z1a2a, double z1a2b, double r2a2b, double h, int N) {
 	return (z1a2a - z1a2b) * ((sqrt(N - 3)) / (2 * (1 - r2a2b) * h));
